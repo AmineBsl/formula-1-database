@@ -10,7 +10,7 @@ export async function getServerSideProps(context){
     const res = await fetch(`${defaultEndpoint}drivers/${driver}.json`);
     const data = await res.json();
     
-    const articleTitle = data.MRData.DriverTable.Drivers[0].url.toString().split('/').at(-1);
+    const articleTitle = data.MRData.DriverTable.Drivers[0].url.toString().split('/').slice(-1)[0];
     const resWiki = await fetch(`https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=${articleTitle}`)
     const image = await resWiki.json();
     let urlImg = image.query.pages[Object.keys(image.query.pages)[0]].original?.source
