@@ -14,9 +14,8 @@ function SearchBar(props) {
         let inputCheck = e.target.value.toLowerCase();
         console.log(inputCheck)
         if(inputCheck.length > 2){
-            let possibleDrivers = drivers.filter(({givenName, familyName}) => givenName.toLowerCase().startsWith(inputCheck) || familyName.toLowerCase().startsWith(inputCheck) || 
-            inputCheck.includes(givenName.toLowerCase()) || inputCheck.includes(familyName.toLowerCase()))
-            let possibleConstructors = constructors.filter(({name}) => name.toLowerCase().startsWith(inputCheck) || inputCheck.includes(name.toLowerCase()))
+            let possibleDrivers = drivers.filter(({givenName, familyName}) => `${givenName.toLowerCase()} ${familyName.toLowerCase()}`.includes(inputCheck))
+            let possibleConstructors = constructors.filter(({name}) => name.toLowerCase().includes(inputCheck))
             let possibleResults = possibleDrivers.concat(possibleConstructors);
             autoCompleteResults(possibleResults)
         }else(
