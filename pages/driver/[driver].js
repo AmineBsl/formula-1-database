@@ -11,6 +11,18 @@ export async function getServerSideProps(context){
     const resDriverResults = await fetch(`${defaultEndpoint}drivers/${driver}/driverStandings.json`)
     const dataDriverResults = await resDriverResults.json();
 
+    const resDriverP1 = await fetch(`${defaultEndpoint}drivers/${driver}/results/1.json`)
+    const dataDriverP1 = await resDriverP1.json();
+
+    const resDriverP2 = await fetch(`${defaultEndpoint}drivers/${driver}/results/2.json`)
+    const dataDriverP2 = await resDriverP2.json();
+
+    const resDriverP3 = await fetch(`${defaultEndpoint}drivers/${driver}/results/3.json`)
+    const dataDriverP3 = await resDriverP3.json();
+
+    const dataPodiumsArray = [dataDriverP1.MRData.total, dataDriverP2.MRData.total, dataDriverP3.MRData.total]
+
+
     const articleTitle = dataDriverResults.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver.url.toString().split('/').slice(-1)[0];
     const resWiki = await fetch(`https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=${articleTitle}`)
     const image = await resWiki.json();
@@ -20,23 +32,26 @@ export async function getServerSideProps(context){
     }
     return {
       props: {
+        dataPodiumsArray,
         dataDriverResults,
         urlImg
       }
     }
 }
 
-const Driver = ({dataDriverResults, urlImg}) => {
+const Driver = ({dataPodiumsArray, dataDriverResults, urlImg}) => {
     const driverResults = dataDriverResults.MRData.StandingsTable.StandingsLists
     const driverInfo = driverResults[0].DriverStandings[0].Driver
+
+    console.log(dataPodiumsArray)
     return (
-        <div className="">
+        <div className="min-h-screen miw-w-24 bg-gray-800">
             <Head>
                 <title>{driverInfo.givenName} {driverInfo.familyName}</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
-            <DriverMain driverResults={driverResults} urlImg={urlImg}/>
+            <DriverMain podiumsArray={dataPodiumsArray} driverResults={driverResults} urlImg={urlImg}/>
         </div>
     )
 }
