@@ -14,7 +14,7 @@ function StandingResults(props) {
 
     return (
         <div className="overflow-auto scrollbar-hide">
-            <table className="table-fixed w-full text-center">
+            <table className="table-fixed text-center w-full">
                 <tbody>
                     {driverResults.map(({ DriverStandings, season }) =>
                         <tr key={season} className={getRowColor(DriverStandings[0].position) + " border-b border-gray-600"}>

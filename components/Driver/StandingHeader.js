@@ -3,10 +3,10 @@ function StandingHeader(props) {
     return (
         <div>
             <div className="border-b border-gray-600">
-                <table className="table-fixed w-full">
+                <table className="table-fixed text-center w-full">
                     <thead className="">
                         <tr>
-                            {titles.map((t, k) => <th key={k} className="p-4">{t}</th>)}
+                            {titles.map((t, k) => <th key={k} className="py-2">{t}</th>)}
                         </tr>
                     </thead>
                 </table>
