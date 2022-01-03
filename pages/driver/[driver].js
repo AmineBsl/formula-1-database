@@ -56,7 +56,7 @@ const Driver = ({dataPodiumsArray, dataDriverResults, urlImg}) => {
 
     console.log(dataPodiumsArray)
     return (
-        <div className="min-h-screen bg-gray-800">
+        <div className="flex flex-col h-screen bg-gray-800">
             <Head>
                 <title>{driverInfo.givenName} {driverInfo.familyName}</title>
                 <link rel="icon" href="/favicon.ico" />

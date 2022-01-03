@@ -2,7 +2,7 @@ function StandingHeader(props) {
     const titles = props.titles
     return (
         <div>
-            <div className="border-b border-gray-600">
+            <div className="border-b border-gray-600 text-white">
                 <table className="table-fixed text-center w-full">
                     <thead className="">
                         <tr>

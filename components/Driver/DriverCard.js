@@ -3,7 +3,7 @@ import Image from "next/image"
 
 function DriverCard(props) {
     return (
-        <div className="flex rounded-md shadow-md shadow-black bg-gray-900 max-h-72 lg:w-1/2 lg:mr-5 lg:py-5">
+        <div className="flex rounded-md shadow-md shadow-black bg-gray-900 lg:h-[28vh] h-[14vh] lg:w-1/2 lg:mr-5 lg:py-5">
             <div className="relative hidden lg:inline-flex w-1/4 mx-5">
                 <Image className="" src={props.urlImg} layout="fill" objectFit="contain" />
             </div>

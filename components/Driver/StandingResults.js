@@ -1,12 +1,12 @@
 function StandingResults(props) {
     const driverResults = props.driverResults
 
-     function getRowColor(position){
-        if(position === '1'){
+    function getRowColor(position) {
+        if (position === '1') {
             return 'text-yellow-400'
-        }else if(position === '2'){
+        } else if (position === '2') {
             return 'text-slate-500'
-        }else if(position === '3'){
+        } else if (position === '3') {
             return 'text-amber-800'
         }
         return 'text-white'
