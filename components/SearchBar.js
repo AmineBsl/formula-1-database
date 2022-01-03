@@ -36,7 +36,10 @@ function SearchBar(props) {
             <SearchIcon className='h-10 w-5'/>
             <input className='flex-grow focus:outline-none bg-gray-200 ml-5' type='text' placeholder='Rechercher un pilote ou une écurie' onChange={handleInput} value={input}></input>
         </div>
-        <SearchResults results={results} />
+        {results.length > 0 && 
+          <SearchResults results={results} />
+        }
+        
       </main>
     )
 }
