@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import RaceResults from "./RaceResults";
 import StandingHeader from "./StandingHeader";
 
-const defaultEndpoint = 'http://ergast.com/api/f1/';
+const defaultEndpoint = 'https://ergast.com/api/f1/';
 
 function DriverResults(props) {
     const driverResults = props.driverResults

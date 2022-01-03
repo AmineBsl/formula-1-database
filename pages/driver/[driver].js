@@ -2,7 +2,7 @@ import Head from "next/head";
 import Header from "../../components/Header";
 import DriverMain from "../../components/Driver/DriverMain";
 
-const defaultEndpoint = 'http://ergast.com/api/f1/';
+const defaultEndpoint = 'https://ergast.com/api/f1/';
 
 export async function getServerSideProps(context){
     const {driver} = context.query;
