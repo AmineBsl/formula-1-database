@@ -1,27 +1,19 @@
-# Next.js + Tailwind CSS Example
+# The Formula 1 database
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+The goal of this [application](https://formula-1-database.vercel.app/) is to provide users with any usefull informations about Formula 1 <br/>
+Data is fetched from [ErgastAPI](http://ergast.com/mrd/)
 
-## Preview
+# Technologies
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+[NextJS](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+# Availaible informations
 
-## Deploy your own
+Driver info : Number of podiums, Championship results, Race Results for each year in F1 <br/>
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+# Upcoming informations
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Constructor info<br/>
+Circuit info<br/>
+Grand prix<br/>
+Season info<br/>
